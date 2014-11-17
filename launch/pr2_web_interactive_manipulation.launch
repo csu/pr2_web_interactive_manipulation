@@ -1,5 +1,5 @@
 <launch>
-  <include file="$(find pr2_description)/launch/upload_pr2.launch"></include>
+  <include file="$(find pr2_description)/robots/upload_pr2.launch"></include>
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
   <!-- <param name="use_gui" value="True" /> -->
   <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> -->
