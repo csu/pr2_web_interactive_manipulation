@@ -1,0 +1,10 @@
+<launch>
+  <include file="$(find pr2_description)/launch/upload_pr2.launch"></include>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" />
+  <node name="joint_state_publisher" pkg="joint_state_publisher" />
+  <param name="use_gui" value="True" />
+  <node name="tf2_web_republisher" pkg="tf2_web_republisher" />
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"></include>
+
+  <arg name="debug" default="False" />
+</launch>
